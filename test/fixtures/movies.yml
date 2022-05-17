@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2022-05-17
+  name: MyString
+  year: 1
+  letterboxdURI: MyString
+  rating: 1
+  tmdbID: MyString
+  genre: MyString
+  posterpath: MyString
+
+two:
+  date: 2022-05-17
+  name: MyString
+  year: 1
+  letterboxdURI: MyString
+  rating: 1
+  tmdbID: MyString
+  genre: MyString
+  posterpath: MyString
