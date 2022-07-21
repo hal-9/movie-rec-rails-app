@@ -1,0 +1,8 @@
+= render 'header'
+
+%ul.movie-list__container
+  = @movies.each do |movie|
+    %li.movie-list__item
+      = link_to movie.letterboxdURI do
+        = image_tag "https://image.tmdb.org/t/p/w200/#{movie.posterpath}", class: "movie-list__poster"
+        %p.movie-list__title= "#{movie.name} (#{movie.year})"

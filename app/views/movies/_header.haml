@@ -1,0 +1,64 @@
+%h1.page-headline Hi, i'm Tuncay. I love movies. Let me recommend you some.
+
+%nav.navigation-container
+  %ul
+    %li
+      %p by decade
+      %ul
+        %li
+          = link_to movies_filter_path('by_decade', '1900-1950' ) do
+            %p up to 50's
+        %li
+          = link_to movies_filter_path('by_decade', '1960-1969' ) do
+            %p 60's
+        %li
+          = link_to movies_filter_path('by_decade', '1970-1979' ) do
+            %p 70's
+        %li
+          = link_to movies_filter_path('by_decade', '1980-1989' ) do
+            %p 80's
+        %li
+          = link_to movies_filter_path('by_decade', '1990-1999' ) do
+            %p 90's
+        %li
+          = link_to movies_filter_path('by_decade', '2000-2009' ) do
+            %p 00's
+        %li
+          = link_to movies_filter_path('by_decade', '2010-2019' ) do
+            %p 10's
+        %li
+          = link_to movies_filter_path('by_decade', '2020-2029' ) do
+            %p 20's
+    %li
+      %p by genre
+      %ul
+        %li
+          = link_to movies_filter_path('by_genre', 'Drama') do
+            %p Drama
+        %li
+          = link_to movies_filter_path('by_genre', 'Horror') do
+            %p Horror
+        %li
+          = link_to movies_filter_path('by_genre', 'Action') do
+            %p Action
+        %li
+          = link_to movies_filter_path('by_genre', 'Crime') do
+            %p Crime
+        %li
+          = link_to movies_filter_path('by_genre', 'Science Fiction') do
+            %p Sci-Fi
+        %li
+          = link_to movies_filter_path('by_genre', 'Fantasy') do
+            %p Fantasy
+        %li
+          = link_to movies_filter_path('by_genre', 'Comedy') do
+            %p Comedy
+        %li
+          = link_to movies_filter_path('by_genre', 'Thriller') do
+            %p Thriller
+    %li
+      = link_to movies_filter_path('favorite_movies', '5') do
+        %p favorite movies
+    %li
+      = link_to movies_filter_path('least_favorite_movies', '1') do
+        %p least favorite movies
