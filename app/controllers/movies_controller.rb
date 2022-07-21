@@ -2,6 +2,8 @@ class MoviesController < ApplicationController
   before_action :find_movies
 
   def index
+    @decades = {"up to 50s": "1900-1959", "60s": "1960-1969", "70s": "1970-1979", "80s": "1980-1989", "90s": "1990-1999", "00s": "2000-2009", "10s": "2010-2019", "20s": "2020-2029"}
+    @genres = ['Horror', 'Drama', 'Action', 'Thriller', 'Science Fiction', 'Fantasy', 'Crime', 'Comedy']
   end
 
   def find_movies
