@@ -17,8 +17,8 @@
             = link_to movies_filter_path("by_genre", "#{genre}") do
               %p= genre
     %li
-      = link_to movies_filter_path('favorite_movies', '5') do
+      = link_to movies_favorites_path('favorites') do
         %p favorite movies
     %li
-      = link_to movies_filter_path('least_favorite_movies', '1') do
+      = link_to movies_favorites_path('least_favorites') do
         %p least favorite movies

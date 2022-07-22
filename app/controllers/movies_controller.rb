@@ -13,8 +13,10 @@ class MoviesController < ApplicationController
       start_date = params[:parameter][0..3]
       end_date = params[:parameter][5..8]
       @movies = Movie.all.by_decade(start_date, end_date)
-    elsif params[:filter] == 'favorite_movies'
-      @movies = Movie.all.favorite_movies
+    elsif params[:filter] == 'favorites'
+      @movies = Movie.all.favorites
+    elsif params[:filter] == 'least_favorites'
+      @movies = Movie.all.least_favorites
     else
       @movies = Movie.all
     end
