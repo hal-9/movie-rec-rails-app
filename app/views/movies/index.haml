@@ -1,9 +1,10 @@
 = render 'header'
 
 %ul.movie-list__container
-  - @movies.order(:rating).reverse.each do |movie|
-    %li.movie-list__item
-      = link_to movie.letterboxdURI do
-        = image_tag "https://image.tmdb.org/t/p/w200/#{movie.posterpath}", class: "movie-list__poster"
-        %p.movie-list__title= "#{movie.name} (#{movie.year})"
-        %p.movie-list__rating= "My Rating: #{movie.rating}/5"
+  - unless @movies.size == 0
+    - @movies.order(:rating).reverse.each do |movie|
+      %li.movie-list__item
+        = link_to movie.letterboxdURI do
+          = image_tag "https://image.tmdb.org/t/p/w200/#{movie.posterpath}", class: "movie-list__poster"
+          %p.movie-list__title= "#{movie.name} (#{movie.year})"
+          %p.movie-list__rating= "My Rating: #{movie.rating}/5"

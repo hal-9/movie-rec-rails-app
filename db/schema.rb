@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 2022_05_17_080535) do
     t.string "tmdbID"
     t.string "genre"
     t.string "posterpath"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

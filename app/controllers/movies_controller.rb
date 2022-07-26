@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
     elsif params[:filter] == 'least_favorites'
       @movies = Movie.all.least_favorites
     else
-      @movies = Movie.all
+      @movies = []
     end
   end
 
